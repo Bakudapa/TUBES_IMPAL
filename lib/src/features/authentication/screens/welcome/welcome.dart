@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../login/login.dart';  // Pastikan path sudah sesuai
+import '../login/login.dart';
 
 class WelcomePage extends StatelessWidget {
   @override
@@ -8,20 +8,20 @@ class WelcomePage extends StatelessWidget {
       backgroundColor: Colors.white,
       body: Column(
         children: [
-          // Main content
+
           Expanded(
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Logo
+
                   Image.asset(
                     'images/img.png',
                     width: 250.0,
                     height: 250.0,
                   ),
                   SizedBox(height: 30.0),
-                  // Get Started button (diubah menjadi tombol navigasi ke halaman login)
+
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.blueAccent,  // Button color

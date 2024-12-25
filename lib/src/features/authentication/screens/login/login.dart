@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../signup/signup.dart'; // Pastikan file signup.dart ada di direktori yang benar
+import '../signup/signup.dart';
+import '../Current Task/CurrentTask.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -13,7 +14,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 50.0),
-              // Logo
+
               Center(
                 child: Column(
                   children: [
@@ -44,20 +45,23 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 30.0),
-              // Tombol Login
               SizedBox(
                 width: double.infinity,
                 height: 50.0,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue, // Warna tombol login
+                    backgroundColor: Colors.blue,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                   ),
                   onPressed: () {
-                    // Logic untuk login
-                    print("Login button pressed");
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CurrentTaskPage(),
+                      ),
+                    );
                   },
                   child: Text(
                     "Login",
@@ -69,7 +73,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20.0),
-              // Teks navigasi ke halaman Sign Up
+
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -83,7 +87,8 @@ class LoginPage extends StatelessWidget {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => SignUpPage()),
+                          builder: (context) => SignUpPage(),
+                        ),
                       );
                     },
                     child: Text(
